@@ -9,7 +9,7 @@ set.seed(123)
 # Install and load required packages
 if (!require('pacman')) install.packages('pacman')
 library(pacman)
-p_load("dplyr", "tidyr", "reshape2", "devtools", "scales", "ellipse", "ggplot2", "lazyeval", "igraph", "truncnorm", "ggraph", "knitr", "stringr", "diagram", "dampack", install = FALSE)
+p_load("dplyr", "tidyr", "reshape2", "devtools", "scales", "ellipse", "ggplot2", "lazyeval", "igraph", "truncnorm", "ggraph", "knitr", "stringr", "diagram", "dampack")
 p_load_gh("DARTH-git/darthtools") # Uncomment if needed
 
 # Load external inputs and functions
