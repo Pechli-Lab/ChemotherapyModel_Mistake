@@ -69,30 +69,30 @@ v_wtp <- seq(0, 50000, by = 1000)
 
 # Generate and display visualizations of the PSA results, then save to PDF
 
-# PSA Scatter Plot
+# Probabilistic Sensitivity Analysis (PSA) Scatter Plot
 plot_psa(l_psa, txtsize = 13)
 dev.copy2pdf(file = "06_figs/psa_scatter_plot.pdf", width = 7, height = 5)
 dev.off()  # Close the PDF device
 
-# ICER Plot
+# Incremental Cost-Effectiveness Ratio (ICER) Plot
 df_cea_psa <- calculate_icers(cost = summary(l_psa)$meanCost, effect = summary(l_psa)$meanEffect, strategies = summary(l_psa)$Strategy)
 plot_icers(df_cea_psa, label = "all", txtsize = 13)
 dev.copy2pdf(file = "06_figs/icer_plot.pdf", width = 7, height = 5)
 dev.off()  # Close the PDF device
 
-# CEAC Plot
+# Cost-Effectiveness Acceptability Curve (CEAC) Plot
 ceac_obj <- ceac(wtp = v_wtp, psa = l_psa)
 plot_ceac(ceac_obj, txtsize = 13, xlim = c(0, NA), n_x_ticks = 14)
 dev.copy2pdf(file = "06_figs/ceac_plot.pdf", width = 7, height = 5)
 dev.off()  # Close the PDF device
 
-# ELC Plot
+# Expected Loss Curve (ELC) Plot
 elc_obj <- calc_exp_loss(wtp = v_wtp, psa = l_psa)
 plot_exp_loss(elc_obj, log_y = FALSE, txtsize = 13, xlim = c(0, NA), n_x_ticks = 14)
 dev.copy2pdf(file = "06_figs/elc_plot.pdf", width = 7, height = 5)
 dev.off()  # Close the PDF device
 
-# EVPI Plot
+# Expected Value of Perfect Information (EVPI) Plot
 evpi_obj <- calc_evpi(wtp = v_wtp, psa = l_psa)
 plot_evpi(evpi_obj, effect_units = "QALY", txtsize = 13, xlim = c(0, NA), n_x_ticks = 14)
 dev.copy2pdf(file = "06_figs/evpi_plot.pdf", width = 7, height = 5)
