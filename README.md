@@ -108,7 +108,7 @@ Please note that there's no error or warning messages will appear if you run the
 * **Hint 7b**: Also, try setting `c_treatment_2` to another value and check the model's output.
 
   ```R
-  l_params_all$c_treatment_2 <- 350
+  l_params_all$c_treatment_2 <- 350000
   ```
 
   

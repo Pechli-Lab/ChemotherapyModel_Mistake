@@ -36,4 +36,4 @@ check_transition_probability(MM.mat)
 plot_psa(l_psa, txtsize = 13)
 
 # Hint 7b: Also, try setting c_treatment_2 to another value and check the model's output.
-l_params_all$c_treatment_2 <- 350
+l_params_all$c_treatment_2 <- 350000
