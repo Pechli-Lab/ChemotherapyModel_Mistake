@@ -43,7 +43,7 @@ u_recovery_sd <- sqrt(0.0008)
 ## Parameters for the PSA distribution of the utility of patients who are treated
 ## at home. 
 u_home_care_mu <- 0.7
-u_home_care_sd <- 0.02
+u_home_care_sd <- 0.5
 
 ## Parameters for the PSA distribution of the utility of treating patients in 
 ## hospital
