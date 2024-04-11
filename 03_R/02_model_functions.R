@@ -166,7 +166,7 @@ calculate_costs_effects <- function(l_params_all)
   p_no_side_effects <- 1 - 
                           c(p_side_effects_t1,
                             p_side_effects_t2)
-  q_no_side_effects <-  p_no_side_effects * u_recovery * (time_horizon + 1) / 52
+  q_no_side_effects <-  p_no_side_effects * u_recover * (time_horizon + 1) / 52
   
   ## Average effect for both Soc and novel treatment per person
   q_overall <- c(q_side_effects + q_no_side_effects + q_longterm)
